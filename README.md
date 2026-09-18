@@ -1,1 +1,1 @@
-# supernova-teleradiology
+# supernova.teleradiology
