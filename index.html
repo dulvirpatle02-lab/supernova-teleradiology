@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -22,7 +24,6 @@
       line-height: 1.6;
     }
 
-    /* NAVBAR */
     nav {
       width: 100%;
       padding: 20px 7%;
@@ -32,7 +33,8 @@
       border-bottom: 1px solid rgba(255,255,255,0.08);
       position: sticky;
       top: 0;
-      background: rgba(7,17,31,0.95);
+      background: rgba(7,17,31,0.96);
+      backdrop-filter: blur(12px);
       z-index: 100;
     }
 
@@ -51,13 +53,13 @@
       text-decoration: none;
       margin-left: 25px;
       font-size: 14px;
+      transition: 0.3s;
     }
 
     nav a:hover {
       color: #39bdf8;
     }
 
-    /* HERO */
     .hero {
       min-height: 85vh;
       padding: 100px 7%;
@@ -69,7 +71,7 @@
     }
 
     .hero-content {
-      max-width: 750px;
+      max-width: 800px;
     }
 
     .badge {
@@ -95,7 +97,7 @@
     .hero p {
       color: #b9c5d3;
       font-size: 18px;
-      max-width: 650px;
+      max-width: 680px;
       margin-bottom: 35px;
     }
 
@@ -111,6 +113,13 @@
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
+      transition: 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
     }
 
     .primary {
@@ -123,7 +132,6 @@
       color: white;
     }
 
-    /* COMMON */
     section {
       padding: 90px 7%;
     }
@@ -142,7 +150,6 @@
       color: #9eabba;
     }
 
-    /* SERVICES */
     .services {
       background: #0a1728;
     }
@@ -180,7 +187,6 @@
       font-size: 14px;
     }
 
-    /* TAT */
     .tat {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -207,7 +213,6 @@
       color: #aab6c4;
     }
 
-    /* HOW IT WORKS */
     .steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -233,12 +238,116 @@
       font-size: 20px;
     }
 
-    /* CTA */
+    .step p {
+      color: #9eabba;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .contact {
+      background: #0a1728;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .contact-info {
+      padding: 35px;
+      background: #0e1e32;
+      border: 1px solid #1d344d;
+      border-radius: 15px;
+    }
+
+    .contact-info h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      color: #9eabba;
+      margin-bottom: 25px;
+    }
+
+    .contact-item {
+      margin-bottom: 18px;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: #39bdf8;
+      margin-bottom: 3px;
+    }
+
+    .contact-item a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: #39bdf8;
+    }
+
+    .demo-form {
+      padding: 35px;
+      background: #0e1e32;
+      border: 1px solid #1d344d;
+      border-radius: 15px;
+    }
+
+    .demo-form h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      color: #aab6c4;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px;
+      border-radius: 8px;
+      border: 1px solid #29435d;
+      background: #07111f;
+      color: white;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #39bdf8;
+    }
+
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .demo-form button {
+      width: 100%;
+      margin-top: 5px;
+    }
+
     .cta {
       text-align: center;
       background:
         radial-gradient(circle at center, rgba(57,189,248,0.12), transparent 50%),
-        #0a1728;
+        #07111f;
     }
 
     .cta h2 {
@@ -251,7 +360,6 @@
       margin-bottom: 30px;
     }
 
-    /* FOOTER */
     footer {
       padding: 35px 7%;
       border-top: 1px solid #1d344d;
@@ -260,7 +368,14 @@
       font-size: 13px;
     }
 
+    .footer-brand {
+      color: white;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
     @media(max-width: 700px) {
+
       nav {
         padding: 17px 5%;
       }
@@ -276,6 +391,18 @@
       .hero {
         padding: 80px 5%;
       }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .cta h2 {
+        font-size: 32px;
+      }
     }
   </style>
 </head>
@@ -284,7 +411,10 @@
 
   <!-- NAVIGATION -->
   <nav>
-    <div class="logo">SUPERNOVA<span>.</span></div>
+
+    <div class="logo">
+      SUPERNOVA<span>.</span>
+    </div>
 
     <div>
       <a href="#home">Home</a>
@@ -292,14 +422,18 @@
       <a href="#workflow">How It Works</a>
       <a href="#contact">Contact</a>
     </div>
+
   </nav>
 
 
   <!-- HERO -->
   <section class="hero" id="home">
+
     <div class="hero-content">
 
-      <div class="badge">TELE-RADIOLOGY • NAGPUR, INDIA</div>
+      <div class="badge">
+        TELE-RADIOLOGY • NAGPUR, INDIA
+      </div>
 
       <h1>
         Reliable Radiology.<br>
@@ -313,11 +447,19 @@
       </p>
 
       <div class="buttons">
-        <a href="#contact" class="btn primary">Request a Demo</a>
-        <a href="#services" class="btn secondary">Explore Services</a>
+
+        <a href="#contact" class="btn primary">
+          Request a Demo
+        </a>
+
+        <a href="#services" class="btn secondary">
+          Explore Services
+        </a>
+
       </div>
 
     </div>
+
   </section>
 
 
@@ -325,8 +467,13 @@
   <section class="services" id="services">
 
     <div class="section-title">
+
       <h2>Our Services</h2>
-      <p>Radiology reporting solutions for healthcare providers.</p>
+
+      <p>
+        Radiology reporting solutions for healthcare providers.
+      </p>
+
     </div>
 
     <div class="cards">
@@ -374,15 +521,21 @@
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- TAT -->
+  <!-- TURNAROUND TIME -->
   <section>
 
     <div class="section-title">
+
       <h2>Turnaround Time</h2>
-      <p>Designed for timely clinical decision-making.</p>
+
+      <p>
+        Designed for timely clinical decision-making.
+      </p>
+
     </div>
 
     <div class="tat">
@@ -394,121 +547,5 @@
 
       <div class="tat-box">
         <strong>40 min</strong>
-        <span>Emergency Reporting</span>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- WORKFLOW -->
-  <section class="services" id="workflow">
-
-    <div class="section-title">
-      <h2>How It Works</h2>
-      <p>A simple workflow connecting imaging centres with reporting support.</p>
-    </div>
-
-    <div class="steps">
-
-      <div class="step">
-        <div class="number">1</div>
-        <h3>Scan</h3>
-        <p>Patient imaging is performed at the centre.</p>
-      </div>
-
-      <div class="step">
-        <div class="number">2</div>
-        <h3>Upload</h3>
-        <p>Case and imaging data are securely transferred.</p>
-      </div>
-
-      <div class="step">
-        <div class="number">3</div>
-        <h3>Reporting</h3>
-        <p>Case is routed through the reporting workflow.</p>
-      </div>
-
-      <div class="step">
-        <div class="number">4</div>
-        <h3>Quality Check</h3>
-        <p>Report undergoes the applicable review process.</p>
-      </div>
-
-      <div class="step">
-        <div class="number">5</div>
-        <h3>Delivery</h3>
-        <p>Final report is delivered to the healthcare provider.</p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CLIENTS -->
-  <section>
-
-    <div class="section-title">
-      <h2>Built for Healthcare Providers</h2>
-      <p>
-        Supporting hospitals, diagnostic centres and clinics
-        with scalable radiology reporting workflows.
-      </p>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="icon">🏥</div>
-        <h3>Hospitals</h3>
-        <p>
-          Reporting support for routine, emergency and
-          overflow workloads.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🔬</div>
-        <h3>Diagnostic Centres</h3>
-        <p>
-          Flexible reporting support for imaging facilities.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">⚕️</div>
-        <h3>Clinics</h3>
-        <p>
-          Radiology reporting support for clinical workflows.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CTA -->
-  <section class="cta" id="contact">
-
-    <h2>Partner With Supernova</h2>
-
-    <p>
-      Looking for reliable teleradiology reporting support?
-      Get in touch with our team.
-    </p>
-
-    <a href="#" class="btn primary">Request a Demo</a>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Supernova Teleradiology · Nagpur, Maharashtra, India
-  </footer>
-
-</body>
-</html>
+        <span>E
+```
