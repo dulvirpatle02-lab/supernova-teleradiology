@@ -43,7 +43,7 @@ footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted)}.foote
 </head>
 <body>
 <header><div class="container nav">
-<a class="logo" href="#home">SUPERNOVA <span>RADIOLOGY</span></a>
+<a class="logo" href="#home">SUPERNOVA <span>TELERADIOLOGY</span></a>
 <button class="menu" onclick="toggleNav()">☰</button>
 <nav id="nav"><a href="#services">Services</a><a href="#workflow">How It Works</a><a href="#partners">For Hospitals</a><a href="#radiologists">Radiologists</a><a href="#contact">Contact</a><button class="btn" onclick="openLogin()">Portal Login</button></nav>
 </div></header>
@@ -52,7 +52,7 @@ footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted)}.foote
 <section class="hero" id="home"><div class="container">
 <div class="hero-grid"><div>
 <div class="kicker">Connected care • Trusted expertise</div>
-<h1>Radiology without <span>boundaries.</span></h1>
+<h1>Teleradiology without <span>boundaries.</span></h1>
 <p class="lead">Supernova Teleradiology connects hospitals and diagnostic centres with dependable remote radiology reporting across CT, MRI, X-ray and USG — supported by streamlined digital workflows.</p>
 <div class="actions"><a class="btn" href="#contact">Request a Partnership</a><a class="btn secondary" href="#workflow">Explore Workflow →</a></div>
 <div class="stats"><div class="stat"><strong>24/7</strong><small>Workflow-ready coverage</small></div><div class="stat"><strong>4+</strong><small>Imaging modalities</small></div><div class="stat"><strong>1</strong><small>Connected workflow</small></div><div class="stat"><strong>100%</strong><small>Radiologist-led final reports</small></div></div>
@@ -60,6 +60,11 @@ footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted)}.foote
 </div></section>
 
 <section id="services"><div class="container"><div class="section-head"><div class="kicker">Our capabilities</div><h2>Radiology services built around your workflow.</h2><p>Flexible reporting support for hospitals, imaging centres and healthcare partners.</p></div>
+<div class="grid" style="margin-bottom:22px">
+<div class="card"><div class="icon">⏱️</div><h3>Routine Reporting</h3><p style="font-size:2rem;color:var(--accent);font-weight:800">1 hr 20 min</p><p>Target turnaround time for routine cases, subject to study complexity and workflow.</p></div>
+<div class="card"><div class="icon">🚨</div><h3>Emergency Reporting</h3><p style="font-size:2rem;color:var(--accent);font-weight:800">40 min</p><p>Priority reporting target for emergency cases, subject to case availability and clinical details.</p></div>
+<div class="card"><div class="icon">🧾</div><h3>Case Tracking</h3><p>Transparent tracking from study review and triage to radiologist reporting and report delivery.</p></div>
+</div>
 <div class="grid">
 <div class="card"><div class="icon">🧠</div><h3>MRI Reporting</h3><p>Brain, spine, musculoskeletal and other MRI studies with structured, consultant-style reporting.</p></div>
 <div class="card"><div class="icon">🩻</div><h3>CT Reporting</h3><p>Routine and emergency CT reporting workflows with case prioritisation and report tracking.</p></div>
@@ -70,7 +75,11 @@ footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted)}.foote
 </div></div></section>
 
 <section id="workflow"><div class="container"><div class="section-head"><div class="kicker">Simple. Connected. Traceable.</div><h2>How Supernova works.</h2><p>A clear workflow from study receipt to final report delivery.</p></div>
-<div class="workflow"><div class="step"><div class="num">01</div><h3>Study received</h3><p>Imaging details and relevant clinical history are shared through the agreed channel.</p></div><div class="step"><div class="num">02</div><h3>Case triage</h3><p>Cases are categorised by modality, urgency and reporting requirements.</p></div><div class="step"><div class="num">03</div><h3>Radiologist reporting</h3><p>A qualified radiologist reviews the study and prepares the report.</p></div><div class="step"><div class="num">04</div><h3>Report delivered</h3><p>The approved report is shared securely with the authorised healthcare partner.</p></div></div></div></section>
+<div class="split" style="margin-bottom:28px">
+<div class="card"><div class="scan" style="height:280px"><div class="scan-ring" style="width:190px;height:190px;border-width:24px"></div></div><p class="notice">Illustrative medical-imaging visual • Not a diagnostic image</p></div>
+<div class="card"><h3 style="font-size:1.5rem">A complete reporting journey</h3><p>Every case moves through a clearly defined, trackable workflow.</p><ul class="list" style="margin-top:12px"><li><strong>Study Review</strong><br>Check study details, image availability and clinical history.</li><li><strong>Case Triage</strong><br>Prioritise routine and emergency examinations.</li><li><strong>Radiologist Reporting</strong><br>Qualified radiologist reviews the study and prepares the report.</li><li><strong>Reporting Delivered</strong><br>Approved report is securely delivered to the authorised facility.</li></ul></div>
+</div>
+<div class="workflow"><div class="step"><div class="num">01</div><h3>Study Review</h3><p>Verify images, patient details and clinical information.</p></div><div class="step"><div class="num">02</div><h3>Case Triage</h3><p>Classify urgency and assign the appropriate workflow.</p></div><div class="step"><div class="num">03</div><h3>Radiologist Reporting</h3><p>Expert review with structured reporting and quality checks.</p></div><div class="step"><div class="num">04</div><h3>Reporting Delivered</h3><p>Final approved report shared through the agreed secure channel.</p></div></div></div></section>
 
 <section id="partners"><div class="container split"><div><div class="kicker">For healthcare facilities</div><h2>Extend your radiology capacity.</h2><p class="lead">Reduce operational bottlenecks with a connected reporting partner that fits your existing imaging workflow.</p><ul class="list" style="margin-top:22px"><li>Hospital and diagnostic-centre onboarding</li><li>CT, MRI, X-ray and USG reporting coordination</li><li>Case status and turnaround visibility</li><li>Secure report delivery and escalation process</li><li>Custom workflow discussion for your facility</li></ul><a class="btn" href="#contact" style="margin-top:25px">Partner with Supernova</a></div>
 <div class="card"><h3>Hospital onboarding enquiry</h3><p>Tell us about your facility and reporting requirements. Our team can discuss the appropriate workflow and integration needs.</p><form onsubmit="submitForm(event,'Hospital enquiry')"><input required placeholder="Hospital / Diagnostic Centre name"><input required type="text" placeholder="Contact person"><input required type="email" placeholder="Work email"><input required type="tel" placeholder="Phone number"><select required><option value="">Select requirement</option><option>CT Reporting</option><option>MRI Reporting</option><option>X-ray Reporting</option><option>USG Coordination</option><option>Complete Teleradiology Support</option></select><button class="btn">Send Enquiry</button></form></div></div></section>
