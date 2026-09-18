@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Supernova Teleradiology | Reliable Radiology. Faster Reporting.</title>
+
+  <meta name="description" content="Supernova Teleradiology provides CT, MRI, X-Ray, emergency reporting and second opinion services for hospitals and diagnostic centres.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #07111f;
+      color: white;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      width: 100%;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      background: rgba(7,17,31,0.95);
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #39bdf8;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #39bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 85vh;
+      padding: 100px 7%;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 80% 30%, rgba(57,189,248,0.15), transparent 35%),
+        #07111f;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 15px;
+      border: 1px solid rgba(57,189,248,0.5);
+      border-radius: 30px;
+      color: #39bdf8;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 6vw, 75px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #39bdf8;
+    }
+
+    .hero p {
+      color: #b9c5d3;
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .primary {
+      background: #39bdf8;
+      color: #06101d;
+    }
+
+    .secondary {
+      border: 1px solid #526579;
+      color: white;
+    }
+
+    /* COMMON */
+    section {
+      padding: 90px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #9eabba;
+    }
+
+    /* SERVICES */
+    .services {
+      background: #0a1728;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 30px;
+      background: #0e1e32;
+      border: 1px solid #1d344d;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #39bdf8;
+    }
+
+    .icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #9eabba;
+      font-size: 14px;
+    }
+
+    /* TAT */
+    .tat {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .tat-box {
+      text-align: center;
+      padding: 35px;
+      border-radius: 15px;
+      background: #0e1e32;
+      border: 1px solid #1d344d;
+    }
+
+    .tat-box strong {
+      display: block;
+      font-size: 45px;
+      color: #39bdf8;
+    }
+
+    .tat-box span {
+      color: #aab6c4;
+    }
+
+    /* HOW IT WORKS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 25px;
+    }
+
+    .number {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #39bdf8;
+      color: #06101d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(57,189,248,0.12), transparent 50%),
+        #0a1728;
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #aab6c4;
+      margin-bottom: 30px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 35px 7%;
+      border-top: 1px solid #1d344d;
+      text-align: center;
+      color: #8190a0;
+      font-size: 13px;
+    }
+
+    @media(max-width: 700px) {
+      nav {
+        padding: 17px 5%;
+      }
+
+      nav div:last-child {
+        display: none;
+      }
+
+      section {
+        padding: 65px 5%;
+      }
+
+      .hero {
+        padding: 80px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">SUPERNOVA<span>.</span></div>
+
+    <div>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#workflow">How It Works</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <div class="badge">TELE-RADIOLOGY • NAGPUR, INDIA</div>
+
+      <h1>
+        Reliable Radiology.<br>
+        <span>Faster Reporting.</span>
+      </h1>
+
+      <p>
+        Supernova Teleradiology connects hospitals and diagnostic
+        centres with professional radiology reporting solutions,
+        helping deliver timely and dependable diagnostic support.
+      </p>
+
+      <div class="buttons">
+        <a href="#contact" class="btn primary">Request a Demo</a>
+        <a href="#services" class="btn secondary">Explore Services</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Radiology reporting solutions for healthcare providers.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🧠</div>
+        <h3>MRI Reporting</h3>
+        <p>
+          Professional MRI reporting support for hospitals
+          and diagnostic centres.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🩻</div>
+        <h3>CT Reporting</h3>
+        <p>
+          CT reporting support across routine and selected
+          emergency cases.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📷</div>
+        <h3>X-Ray Reporting</h3>
+        <p>
+          Timely digital reporting support for X-Ray studies.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Emergency Reporting</h3>
+        <p>
+          Priority reporting workflow for urgent clinical cases.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔎</div>
+        <h3>Second Opinion</h3>
+        <p>
+          Additional radiology review support for selected cases.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- TAT -->
+  <section>
+
+    <div class="section-title">
+      <h2>Turnaround Time</h2>
+      <p>Designed for timely clinical decision-making.</p>
+    </div>
+
+    <div class="tat">
+
+      <div class="tat-box">
+        <strong>1:20</strong>
+        <span>Routine Reporting</span>
+      </div>
+
+      <div class="tat-box">
+        <strong>40 min</strong>
+        <span>Emergency Reporting</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WORKFLOW -->
+  <section class="services" id="workflow">
+
+    <div class="section-title">
+      <h2>How It Works</h2>
+      <p>A simple workflow connecting imaging centres with reporting support.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="number">1</div>
+        <h3>Scan</h3>
+        <p>Patient imaging is performed at the centre.</p>
+      </div>
+
+      <div class="step">
+        <div class="number">2</div>
+        <h3>Upload</h3>
+        <p>Case and imaging data are securely transferred.</p>
+      </div>
+
+      <div class="step">
+        <div class="number">3</div>
+        <h3>Reporting</h3>
+        <p>Case is routed through the reporting workflow.</p>
+      </div>
+
+      <div class="step">
+        <div class="number">4</div>
+        <h3>Quality Check</h3>
+        <p>Report undergoes the applicable review process.</p>
+      </div>
+
+      <div class="step">
+        <div class="number">5</div>
+        <h3>Delivery</h3>
+        <p>Final report is delivered to the healthcare provider.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CLIENTS -->
+  <section>
+
+    <div class="section-title">
+      <h2>Built for Healthcare Providers</h2>
+      <p>
+        Supporting hospitals, diagnostic centres and clinics
+        with scalable radiology reporting workflows.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>Hospitals</h3>
+        <p>
+          Reporting support for routine, emergency and
+          overflow workloads.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔬</div>
+        <h3>Diagnostic Centres</h3>
+        <p>
+          Flexible reporting support for imaging facilities.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚕️</div>
+        <h3>Clinics</h3>
+        <p>
+          Radiology reporting support for clinical workflows.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+
+    <h2>Partner With Supernova</h2>
+
+    <p>
+      Looking for reliable teleradiology reporting support?
+      Get in touch with our team.
+    </p>
+
+    <a href="#" class="btn primary">Request a Demo</a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Supernova Teleradiology · Nagpur, Maharashtra, India
+  </footer>
+
+</body>
+</html>
