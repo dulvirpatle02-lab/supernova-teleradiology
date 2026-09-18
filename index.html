@@ -1,438 +1,45 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Supernova Teleradiology | Reliable Radiology. Faster Reporting.</title>
+  <title>Supernova Teleradiology | Professional Radiology Reporting</title>
 
-  <meta name="description" content="Supernova Teleradiology provides CT, MRI, X-Ray, emergency reporting and second opinion services for hospitals and diagnostic centres.">
+  <meta name="description"
+        content="Supernova Teleradiology provides professional CT, MRI and X-Ray reporting support for hospitals and diagnostic centres.">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #07111f;
-      color: white;
-      line-height: 1.6;
-    }
-
-    nav {
-      width: 100%;
-      padding: 20px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      position: sticky;
-      top: 0;
-      background: rgba(7,17,31,0.96);
-      backdrop-filter: blur(12px);
-      z-index: 100;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: #39bdf8;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #39bdf8;
-    }
-
-    .hero {
-      min-height: 85vh;
-      padding: 100px 7%;
-      display: flex;
-      align-items: center;
-      background:
-        radial-gradient(circle at 80% 30%, rgba(57,189,248,0.15), transparent 35%),
-        #07111f;
-    }
-
-    .hero-content {
-      max-width: 800px;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 15px;
-      border: 1px solid rgba(57,189,248,0.5);
-      border-radius: 30px;
-      color: #39bdf8;
-      font-size: 13px;
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: clamp(45px, 6vw, 75px);
-      line-height: 1.05;
-      margin-bottom: 25px;
-    }
-
-    h1 span {
-      color: #39bdf8;
-    }
-
-    .hero p {
-      color: #b9c5d3;
-      font-size: 18px;
-      max-width: 680px;
-      margin-bottom: 35px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      transition: 0.3s;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-    }
-
-    .primary {
-      background: #39bdf8;
-      color: #06101d;
-    }
-
-    .secondary {
-      border: 1px solid #526579;
-      color: white;
-    }
-
-    section {
-      padding: 90px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .section-title h2 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: #9eabba;
-    }
-
-    .services {
-      background: #0a1728;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      padding: 30px;
-      background: #0e1e32;
-      border: 1px solid #1d344d;
-      border-radius: 15px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #39bdf8;
-    }
-
-    .icon {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #9eabba;
-      font-size: 14px;
-    }
-
-    .tat {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .tat-box {
-      text-align: center;
-      padding: 35px;
-      border-radius: 15px;
-      background: #0e1e32;
-      border: 1px solid #1d344d;
-    }
-
-    .tat-box strong {
-      display: block;
-      font-size: 45px;
-      color: #39bdf8;
-    }
-
-    .tat-box span {
-      color: #aab6c4;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-    }
-
-    .step {
-      text-align: center;
-      padding: 25px;
-    }
-
-    .number {
-      width: 50px;
-      height: 50px;
-      margin: 0 auto 15px;
-      border-radius: 50%;
-      background: #39bdf8;
-      color: #06101d;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    .step p {
-      color: #9eabba;
-      font-size: 14px;
-      margin-top: 8px;
-    }
-
-    .contact {
-      background: #0a1728;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .contact-info {
-      padding: 35px;
-      background: #0e1e32;
-      border: 1px solid #1d344d;
-      border-radius: 15px;
-    }
-
-    .contact-info h3 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-
-    .contact-info p {
-      color: #9eabba;
-      margin-bottom: 25px;
-    }
-
-    .contact-item {
-      margin-bottom: 18px;
-    }
-
-    .contact-item strong {
-      display: block;
-      color: #39bdf8;
-      margin-bottom: 3px;
-    }
-
-    .contact-item a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .contact-item a:hover {
-      color: #39bdf8;
-    }
-
-    .demo-form {
-      padding: 35px;
-      background: #0e1e32;
-      border: 1px solid #1d344d;
-      border-radius: 15px;
-    }
-
-    .demo-form h3 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 13px;
-      color: #aab6c4;
-      margin-bottom: 6px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 13px;
-      border-radius: 8px;
-      border: 1px solid #29435d;
-      background: #07111f;
-      color: white;
-      outline: none;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: #39bdf8;
-    }
-
-    .form-group textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-
-    .demo-form button {
-      width: 100%;
-      margin-top: 5px;
-    }
-
-    .cta {
-      text-align: center;
-      background:
-        radial-gradient(circle at center, rgba(57,189,248,0.12), transparent 50%),
-        #07111f;
-    }
-
-    .cta h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .cta p {
-      color: #aab6c4;
-      margin-bottom: 30px;
-    }
-
-    footer {
-      padding: 35px 7%;
-      border-top: 1px solid #1d344d;
-      text-align: center;
-      color: #8190a0;
-      font-size: 13px;
-    }
-
-    .footer-brand {
-      color: white;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    @media(max-width: 700px) {
-
-      nav {
-        padding: 17px 5%;
-      }
-
-      nav div:last-child {
-        display: none;
-      }
-
-      section {
-        padding: 65px 5%;
-      }
-
-      .hero {
-        padding: 80px 5%;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section-title h2 {
-        font-size: 32px;
-      }
-
-      .cta h2 {
-        font-size: 32px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- NAVBAR -->
   <nav>
-
-    <div class="logo">
+    <a class="logo" href="index.html">
       SUPERNOVA<span>.</span>
-    </div>
+    </a>
 
-    <div>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#workflow">How It Works</a>
-      <a href="#contact">Contact</a>
-    </div>
+    <button class="menu" onclick="toggleMenu()">☰</button>
 
+    <div class="navlinks">
+      <a class="active" href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="facilities.html">Healthcare Facilities</a>
+      <a href="join.html">Join Our Network</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
 
   <!-- HERO -->
-  <section class="hero" id="home">
+  <header class="hero">
 
-    <div class="hero-content">
+    <div class="hero-copy">
 
       <div class="badge">
-        TELE-RADIOLOGY • NAGPUR, INDIA
+        TELE-RADIOLOGY • INDIA
       </div>
 
       <h1>
@@ -440,84 +47,107 @@
         <span>Faster Reporting.</span>
       </h1>
 
-      <p>
+      <p class="lead">
         Supernova Teleradiology connects hospitals and diagnostic
-        centres with professional radiology reporting solutions,
-        helping deliver timely and dependable diagnostic support.
+        centres with professional radiology reporting workflows
+        for CT, MRI and X-Ray studies.
       </p>
 
-      <div class="buttons">
+      <div class="btns">
 
-        <a href="#contact" class="btn primary">
+        <a class="btn primary" href="contact.html">
           Request a Demo
         </a>
 
-        <a href="#services" class="btn secondary">
+        <a class="btn ghost" href="services.html">
           Explore Services
+        </a>
+
+        <a class="btn ghost"
+           href="https://wa.me/917721936193?text=Hello%20Supernova%20Teleradiology%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+           target="_blank">
+          WhatsApp Us
         </a>
 
       </div>
 
     </div>
 
-  </section>
+  </header>
 
 
   <!-- SERVICES -->
-  <section class="services" id="services">
+  <section>
 
-    <div class="section-title">
+    <div class="title">
 
-      <h2>Our Services</h2>
+      <h2>
+        Radiology <span>Reporting Services</span>
+      </h2>
 
       <p>
-        Radiology reporting solutions for healthcare providers.
+        Flexible reporting support designed for hospitals,
+        diagnostic centres and healthcare partners.
       </p>
 
     </div>
 
-    <div class="cards">
+
+    <div class="grid">
 
       <div class="card">
+
         <div class="icon">🧠</div>
+
         <h3>MRI Reporting</h3>
+
         <p>
-          Professional MRI reporting support for hospitals
-          and diagnostic centres.
+          Professional reporting support for routine and
+          selected advanced MRI examinations.
         </p>
+
       </div>
 
+
       <div class="card">
+
         <div class="icon">🩻</div>
+
         <h3>CT Reporting</h3>
+
         <p>
-          CT reporting support across routine and selected
-          emergency cases.
+          Structured CT reporting support across routine,
+          emergency and selected specialised studies.
         </p>
+
       </div>
 
+
       <div class="card">
-        <div class="icon">📷</div>
+
+        <div class="icon">☢️</div>
+
         <h3>X-Ray Reporting</h3>
+
         <p>
-          Timely digital reporting support for X-Ray studies.
+          Reporting support for chest, bone, joint and
+          routine radiographic examinations.
         </p>
+
       </div>
 
+
       <div class="card">
+
         <div class="icon">⚡</div>
-        <h3>Emergency Reporting</h3>
-        <p>
-          Priority reporting workflow for urgent clinical cases.
-        </p>
-      </div>
 
-      <div class="card">
-        <div class="icon">🔎</div>
-        <h3>Second Opinion</h3>
+        <h3>Priority Cases</h3>
+
         <p>
-          Additional radiology review support for selected cases.
+          Priority reporting workflows can be discussed
+          according to workload and healthcare requirements.
         </p>
+
       </div>
 
     </div>
@@ -525,28 +155,227 @@
   </section>
 
 
-  <!-- TURNAROUND TIME -->
-  <section>
+  <!-- WHY SUPERNOVA -->
+  <section class="alt">
 
-    <div class="section-title">
+    <div class="title">
 
-      <h2>Turnaround Time</h2>
+      <h2>
+        Why <span>Supernova?</span>
+      </h2>
 
       <p>
-        Designed for timely clinical decision-making.
+        Built around practical workflows, communication
+        and scalable radiology support.
       </p>
 
     </div>
 
-    <div class="tat">
 
-      <div class="tat-box">
-        <strong>1:20</strong>
-        <span>Routine Reporting</span>
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>Flexible Workflow</h3>
+
+        <p>
+          Reporting workflows can be planned according
+          to your facility's requirements.
+        </p>
+
       </div>
 
-      <div class="tat-box">
-        <strong>40 min</strong>
-        <span>E
-```
-          
+
+      <div class="card">
+
+        <h3>Scalable Support</h3>
+
+        <p>
+          Suitable for routine workload, overflow cases
+          and additional reporting requirements.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Digital Delivery</h3>
+
+        <p>
+          Streamlined digital communication for case
+          submission and report delivery.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Professional Network</h3>
+
+        <p>
+          A growing network connecting healthcare
+          facilities with radiology professionals.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+  <section>
+
+    <div class="title">
+
+      <h2>
+        How It <span>Works</span>
+      </h2>
+
+      <p>
+        A simple workflow for connecting your cases
+        with the reporting network.
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+      <div class="step">
+
+        <div class="num">01</div>
+
+        <h3>Scan</h3>
+
+        <p>
+          Patient imaging is acquired at your facility.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="num">02</div>
+
+        <h3>Submit</h3>
+
+        <p>
+          Case and relevant clinical information are submitted
+          through the agreed workflow.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="num">03</div>
+
+        <h3>Report</h3>
+
+        <p>
+          The case enters the appropriate reporting workflow.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="num">04</div>
+
+        <h3>Review</h3>
+
+        <p>
+          Reporting and communication follow the agreed
+          service process.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="num">05</div>
+
+        <h3>Deliver</h3>
+
+        <p>
+          The completed report is communicated through
+          the agreed digital workflow.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>
+      Ready to discuss your <span>reporting workflow?</span>
+    </h2>
+
+    <p>
+      Talk to Supernova Teleradiology about your
+      hospital or diagnostic centre requirements.
+    </p>
+
+    <div class="btns" style="justify-content:center;">
+
+      <a class="btn primary" href="contact.html">
+        Request a Demo
+      </a>
+
+      <a class="btn ghost"
+         href="tel:+917721936193">
+        Call +91 77219 36193
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footerlogo">
+      SUPERNOVA Teleradiology
+    </div>
+
+    Nagpur, Maharashtra, India
+    <br>
+
+    Call / WhatsApp:
+    <a href="tel:+917721936193">
+      +91 77219 36193
+    </a>
+
+    <br>
+
+    Email:
+    <a href="mailto:info@supernovateleradiology.com">
+      info@supernovateleradiology.com
+    </a>
+
+    <br><br>
+
+    © 2026 Supernova Teleradiology.
+    All rights reserved.
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
